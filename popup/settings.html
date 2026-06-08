@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Better Fetbox Popup</title>
+    <style>
+      body {
+        width: 300px;
+        height: 280px;
+        margin: 0;
+        padding: 18px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: #f7f7fb;
+        color: #111;
+      }
+      h1 {
+        margin: 0 0 14px;
+        font-size: 1.1rem;
+      }
+      .field {
+        margin-bottom: 14px;
+      }
+      label {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 0.95rem;
+        font-weight: 600;
+      }
+      .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+      }
+      input[type="range"] {
+        width: 50%;
+      }
+      input[type="text"],
+      input[type="number"] {
+        width: 50%;
+        padding: 8px 10px;
+        border: 1px solid #cbd5e1;
+        border-radius: 8px;
+        font-size: 0.95rem;
+      }
+      .toggle-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 18px;
+      }
+      .toggle-row label {
+        margin: 0;
+      }
+      .toggle-row input {
+        transform: scale(1.1);
+      }
+      .value-display {
+        margin-top: 8px;
+        font-size: 0.95rem;
+        color: #334155;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Age Range filter</h1>
+    <div class="toggle-row">
+      <label for="enabledToggle">Enable filter</label>
+      <input id="enabledToggle" type="checkbox" />
+    </div>
+    <div class="row">
+      <div class="field">
+        <label for="lowerAgeBound">Older than</label>
+        <input id="lowerAgeBound" type="number" min="18" max="100" step="1" placeholder="18" />
+      </div>
+      <div class="field">
+        <label for="upperAgeBound">Younger than</label>
+        <input id="upperAgeBound" type="number" min="18" max="100" step="1" placeholder="99" />
+      </div>
+    </div>
+    <div class="field">
+      <label for="ignoreAnonAges">Ignore anon ages (100+)</label>
+      <input id="ignoreAnonAges" type="checkbox" />
+    </div>
+    <div class="field">
+      <div id="popupNote">
+        Refresh the inbox page after changing settings to apply. Kinda wild that this basic feature isn't built in ¯\_(ツ)_/¯
+      </div>
+    </div>
+    <script src="../scripts/popup.js"></script>
+  </body>
+</html>

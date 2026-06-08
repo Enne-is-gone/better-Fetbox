@@ -1,0 +1,24 @@
+{
+  "name": "Better Fetbox",
+  "description": "Small extention to allow abit more filtering in Fetlife's inbox",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["storage"],
+    "icons": {
+    "16": "images/filter-16.png",
+    "32": "images/filter-32.png",
+    "96": "images/filter-96.png"
+  },
+  "action": {
+    "default_popup": "popup/settings.html",
+    "default_icon": "images/filter-16.png"
+  },
+    "content_scripts": [
+    {
+      "js": ["scripts/filterByAgeRange.js"],
+      "matches": [
+        "https://fetlife.com/inbox"
+      ]
+    }
+  ]
+}

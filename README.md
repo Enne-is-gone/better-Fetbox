@@ -1,3 +1,5 @@
+Small and simple chrome extention to add age filtering to Fetlife's inbox
+
 - Go here chrome://extensions
 - Turn on dev mode
 - Load Unpacked
